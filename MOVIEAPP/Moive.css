@@ -63,3 +63,45 @@ main{
     width: 100%;
 }
 
+.movie{
+    background-color: var(--secondary-color);
+    position: relative;
+    overflow: hidden;
+    border-radius: 3px;
+}
+
+.movie-info{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+}
+
+.movie-info h3 {
+    font-weight: 400;
+}
+
+.movie-info span {
+    background-color: var(--primary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.movie-info span.green {
+    color: #59b559;
+}
+
+.movie-info span.orange{
+    color: #f6aa4c;
+}
+
+.movie-info span.red {
+    color: #d95950;
+}
+
+.overview{
+    
+}
