@@ -59,3 +59,7 @@ main{
     padding: 2rem;
 }
 
+.movie img  {
+    width: 100%;
+}
+
