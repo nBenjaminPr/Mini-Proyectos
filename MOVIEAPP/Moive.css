@@ -15,6 +15,21 @@ body{
     background-color: var(--primary-color);
 }
 
+#form{
+    display: flex;
+    justify-content: space-between;
+}
+
+h2{
+    margin: 5px;
+    color: #7378c5;
+}
+
+#menu{
+    display: flex;
+    justify-content: space-between;
+}
+
 header{
     position: sticky;
     top: 0;
@@ -112,4 +127,20 @@ main{
     max-width: 100%;
     transform: translateY(101%);
     transition: transform 0.5s ease-in;
+}
+
+.movie:hover .overview{
+    transform: translateY(0);
+}
+
+@media (max-width: 480px){
+    :root{
+        font-size: 12px;
+    }
+}
+
+@media (max-width:360px) {
+    :root{
+        font-size: 10px;
+    }
 }
