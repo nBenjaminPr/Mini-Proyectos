@@ -144,3 +144,30 @@ main{
         font-size: 10px;
     }
 }
+
+
+ /* FOOTER */
+
+footer {
+    background-color:#141a32;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.redes-sociales a {
+    color: #fff;
+    font-size: 20px;
+    margin-right: 20px;
+    transition: all 0.3s ease-in-out;
+}
+
+.redes-sociales a:hover {
+    transform: scale(1.2);
+}
+
+.informacion p {
+    margin: 5px 0;
+}

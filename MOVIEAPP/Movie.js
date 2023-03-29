@@ -69,3 +69,29 @@ form.addEventListener('submit', (e) => {
         window.location.reload();
     }
 });
+
+
+const redesSociales = document.querySelectorAll('.redes-sociales a');
+
+redesSociales.forEach((redSocial) => {
+  redSocial.addEventListener('click', () => {
+    window.open(redSocial.href, '_blank');
+  });
+});
+
+const footer = document.querySelector('footer');
+
+window.addEventListener('resize', () => {
+  const windowHeight = window.innerHeight;
+  const bodyHeight = document.body.offsetHeight;
+  const footerHeight = footer.offsetHeight;
+
+  if (windowHeight > bodyHeight) {
+    footer.style.position = 'fixed';
+    footer.style.bottom = 0;
+    footer.style.left = 0;
+    footer.style.right = 0;
+  } else {
+    footer.style.position = 'static';
+  }
+});
