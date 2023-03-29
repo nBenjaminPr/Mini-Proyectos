@@ -82,16 +82,16 @@ redesSociales.forEach((redSocial) => {
 const footer = document.querySelector('footer');
 
 window.addEventListener('resize', () => {
-  const windowHeight = window.innerHeight;
-  const bodyHeight = document.body.offsetHeight;
-  const footerHeight = footer.offsetHeight;
-
-  if (windowHeight > bodyHeight) {
+    const bodyHeight = document.body.offsetHeight;
+    const windowHeight = window.innerHeight;    
+    const footerHeight = footer.offsetHeight;
+    
+if (windowHeight > bodyHeight) {
     footer.style.position = 'fixed';
     footer.style.bottom = 0;
     footer.style.left = 0;
     footer.style.right = 0;
-  } else {
+} else {
     footer.style.position = 'static';
-  }
+}
 });
