@@ -111,3 +111,28 @@ h1{
     transform: rotateY(180deg);
 }
 
+@media screen and (max-width: 700px) {
+    .cards{
+        height: 350px;
+        width: 350px;
+    }
+    .card .front-view img{
+        width: 17px;
+    }
+    .card .back-view img{
+        max-width: 40px;
+    }
+}
+
+@media screen and (max-width: 530px) {
+    .cards{
+        height: 300px;
+        width: 300px;
+    }
+    .card .front-view img{
+        width: 15px;
+    }
+    .card .back-view img{
+        max-width: 35px;
+    }
+}
