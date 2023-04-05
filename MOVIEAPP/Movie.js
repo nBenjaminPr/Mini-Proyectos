@@ -84,7 +84,6 @@ const footer = document.querySelector('footer');
 window.addEventListener('resize', () => {
     const bodyHeight = document.body.offsetHeight;
     const windowHeight = window.innerHeight;    
-    const footerHeight = footer.offsetHeight;
     
 if (windowHeight > bodyHeight) {
     footer.style.position = 'fixed';
