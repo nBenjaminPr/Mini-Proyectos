@@ -52,7 +52,7 @@ function shuffleCard() {
     matched = 0;
     disableDeck = false;
     cardOne = cardTwo = "";
-    let arr = [1,2,3,4,5,6,7,8];
+    let arr = [1,2,3,4,5,6,7,8,1,2,3,4,5,6,7,8];
     arr.sort (() =>
         Math.random() > 0.5 ? 1 : -1
         );
@@ -60,7 +60,7 @@ function shuffleCard() {
     cards.forEach((card, i) => {
         card.classList.remove("flip");
         let imgTag = card.querySelector(".back-view img");
-        imgTag.src = `images/img-${arr[i]}.png`;
+        imgTag.src = `img/img-${arr[i]}.png`;
         card.addEventListener("click", flipCard);
     })
 }
