@@ -43,6 +43,10 @@ body{
     transition: transform 0.3s ease-in-out;
 }
 
+.nav.visible{
+    transform: translateX(0);
+}
+
 .nav-black{
     background-color: rgb(34, 31, 31);
     width: 60%;
