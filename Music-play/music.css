@@ -1,7 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: whitesmoke;
-    background-color: black;
 }
 
 .player{
@@ -19,6 +18,14 @@ body{
     justify-content: center;
 }
 
+.wrapper{
+    margin: 1rem;
+    border: 1px solid transparent;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;;
+}
+
 .track-art{
     margin: 25px;
     height: 150px;
@@ -33,4 +40,17 @@ body{
     -moz-border-radius:190px;
     -webkit-border-radius:190px;
     border-radius: 190px;
+}
+
+.now-playing{
+    font-size: 1rem;
+}
+
+.track-name{
+    font-size: 2rem;
+}
+
+.track-artist{
+    margin-top: 5px;
+    font-size: 1.2rem;
 }
