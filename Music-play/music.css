@@ -72,15 +72,50 @@ body{
 .playpause-track,
 .prev-track,
 .next-track{
-    padding: 25px;
+    padding: 15px;
     opacity: 0.8;
     transition: opacity .2s;
 }
 
-.repeat-track:hover,
-.random-track:hover,
-.playpause-track:hover,
-.prev-track:hover,
-.next-track:hover{
+
+.slider_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seek_slider,
+.volume_slider{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #37ff91;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.seek_slider::-webkit-slider-thumb,
+.volume_slider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border: 3px solid #ff8737;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.seek_slider:hover,
+.volume_slider:hover{
     opacity: 1.0;
+}
+.seek_slider{
+    width: 60%;
+}
+
+.volume_slider{
+    width: 30%;
 }
