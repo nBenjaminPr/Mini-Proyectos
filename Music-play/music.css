@@ -119,3 +119,35 @@ body{
 .volume_slider{
     width: 30%;
 }
+
+.current-time,
+.total-duration{
+    padding: 10px;
+}
+i.fa-volume-down,
+i.fa-volume-up{
+    padding: 10px;
+}
+i,
+i.fa-play-circle,
+i.fa-pause-circle,
+i.fa-step-forward,
+i.fa-step-backward{
+    cursor: pointer;
+}
+.randomActive{
+    color: black;
+}
+.rotate{
+    animation: rotation 8s infinite linear;
+}
+
+@keyframes rotation{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(359deg);
+    }
+}
+
