@@ -45,3 +45,25 @@ const music_list = [
     }
 ];
 
+
+loadTrack(track_index);
+
+function loadTrack(track_index){
+    clearInterval(updateTimer);
+    reset();
+
+
+    curr_track.src = music_list [track_index].music;
+    curr_time.load();
+
+    track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
+    track_name.textContent = music_list[track_index].name;
+    track_artist.textContent = music_list[track_index].artist;
+    now_playing.textContent = "Música " + (track_index + 1) + " de " + music_list.length;
+
+    updateTimer = setInterval(setUpdate, 1000);
+
+    curr_track.addEventListener('ended', nextTrack);
+    random_bg_color();
+
+}
