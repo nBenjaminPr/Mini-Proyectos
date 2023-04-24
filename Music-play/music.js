@@ -25,23 +25,23 @@ const music_list = [
         img : './asset/img/Stan.jpg',
         name : 'Stan Long',
         artist : 'Eminem ft Dido',
-        music : 'music/Stan Long.mp3'
+        music : './asset/music/Stan Long.mp3'
     },
     {
         img : './asset/img/SeeYouAgain.jpg',
         name : 'See You Again',
         artist : 'Wiz Khalifa ft Charlie Puth',
-        music : 'music/SeeYouAgain.mp3'
+        music : './asset/music/SeeYouAgain.mp3'
     },{
         img : './asset/img/7Year.jpg',
         name : '7 Year',
         artist : 'Lukas Graham',
-        music : 'music/7Year.mp3'
+        music : './asset/music/7Year.mp3'
     },{
         img : './asset/img/Criminal.jpg',
         name : 'Smooth Criminal',
         artist : 'Michael Jackson',
-        music : 'music/Criminal.mp3'
+        music : './asset/music/Criminal.mp3'
     }
 ];
 
@@ -89,3 +89,39 @@ function random_bg_color(){
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
     document.body.style.background = gradient;
 } 
+
+function randomTrack(){
+    isRandom ? pauseRandom() : playRandom();
+}
+function playRandom(){
+    isRandom = true;
+    randomIcon.classList.add('randomActive');
+}
+function pauseRandom(){
+    isRandom = false;
+    randomIcon.classList.remove('randomActive');
+}
+
+function repeatTrack(){
+    let current_index = track_index;
+    loadTrack(current_index);
+    playTrack();
+}
+function playpauseTrack(){
+    isPlaying ? pauseTrack() : playTrack();
+}
+
+function playTrack(){
+    curr_track.play();
+    isPlaying = true;
+    track_art.classList.add('rotate');
+    wave.classList.add('loader');
+    playpause_btn.innerHTML = '<i class="fa fa-pause-circle fa-5x"></i>';
+}
+function pauseTrack(){
+    curr_track.pause();
+    isPlaying = false;
+    track_art.classList.remove('rotate');
+    wave.classList.remove('loader');
+    playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
+}
