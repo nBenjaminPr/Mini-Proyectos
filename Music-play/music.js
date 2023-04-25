@@ -31,12 +31,12 @@ const music_list = [
         img : './asset/img/SeeYouAgain.jpg',
         name : 'See You Again',
         artist : 'Wiz Khalifa ft Charlie Puth',
-        music : './asset/music/SeeYouAgain.mp3'
+        music : './asset/music/music_SeeYouAgain.mp3'
     },{
         img : './asset/img/7Year.jpg',
         name : '7 Year',
         artist : 'Lukas Graham',
-        music : './asset/music/7Year.mp3'
+        music : './asset/music/music_7Year.mp3'
     },{
         img : './asset/img/Criminal.jpg',
         name : 'Smooth Criminal',
@@ -52,9 +52,8 @@ function loadTrack(track_index){
     clearInterval(updateTimer);
     reset();
 
-
-    curr_track.src = music_list [track_index].music;
-    curr_time.load();
+    curr_track.src = music_list[track_index].music;
+    curr_track.load();
 
     track_art.style.backgroundImage = "url(" + music_list[track_index].img + ")";
     track_name.textContent = music_list[track_index].name;
@@ -65,7 +64,6 @@ function loadTrack(track_index){
 
     curr_track.addEventListener('ended', nextTrack);
     random_bg_color();
-
 }
 
 function random_bg_color(){
@@ -78,17 +76,21 @@ function random_bg_color(){
             let y = hex[x];
             a += y;
         }
-
         return a;
     }
-
     let Color1 = populate('#');
     let Color2 = populate('#');
     var angle = 'to right';
 
     let gradient = 'linear-gradient(' + angle + ',' + Color1 + ', ' + Color2 + ")";
     document.body.style.background = gradient;
-} 
+}
+
+function reset(){
+    curr_time.textContent = "00:00";
+    total_duration.textContent = "00:00";
+    seek_slider.value = 0;
+}
 
 function randomTrack(){
     isRandom ? pauseRandom() : playRandom();
