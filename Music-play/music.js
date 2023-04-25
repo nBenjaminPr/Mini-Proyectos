@@ -125,3 +125,32 @@ function pauseTrack(){
     wave.classList.remove('loader');
     playpause_btn.innerHTML = '<i class="fa fa-play-circle fa-5x"></i>';
 }
+
+function nextTrack(){
+    if(track_index < music_list.length - 1 && isRandom === false){
+        track_index += 1;
+    }else if(track_index < music_list.length - 1 && isRandom === true){
+        let random_index = Number.parseInt(Math.random() * music_list.length);
+        track_index = random_index;
+    }else{
+        track_index = 0;
+    }
+    loadTrack(track_index);
+    playTrack();
+}
+function prevTrack(){
+    if(track_index > 0){
+        track_index -= 1;
+    }else{
+        track_index = music_list.length -1;
+    }
+    loadTrack(track_index);
+    playTrack();
+}
+function seekTo(){
+    let seekto = curr_track.duration * (seek_slider.value / 100);
+    curr_track.currentTime = seekto;
+}
+function setVolume(){
+    curr_track.volume = volume_slider.value / 100;
+}
